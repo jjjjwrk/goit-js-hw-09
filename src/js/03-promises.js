@@ -31,7 +31,7 @@ function onSubmit(event){
 
   for(let i = 1; i <= amount; i += 1){
     createPromise(i, userDelay).then(({ position, delay }) => {
-      console.log('✅ Fulfilled promise ${position} in ${delay}ms')
+      console.log(`✅ Fulfilled promise ${position} in ${delay}ms`)
     }).catch(({ position, delay }) => {
       console.log(`❌ Rejected promise ${position} in ${delay}ms`);
     });
