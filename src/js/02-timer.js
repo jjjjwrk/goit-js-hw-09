@@ -70,8 +70,12 @@ function convertMs(ms) {
 
 function updateTimer(convertData) {
     const { days, hours, minutes, seconds } = convertData;
-    inputDays.textContent = days;
-    inputHours.textContent = hours;
-    inputMinutes.textContent = minutes;
-    inputSeconds.textContent = seconds;
+    inputDays.textContent = addLeadingZero(days);
+    inputHours.textContent = addLeadingZero(hours);
+    inputMinutes.textContent = addLeadingZero(minutes);
+    inputSeconds.textContent = addLeadingZero(seconds);
+};
+
+function addLeadingZero(value) {
+    return String(value).padStart(2, 0);
 };

@@ -37,6 +37,5 @@ function onSubmit(event){
     });
     userDelay += step;
   };
-  event.currentTarget.reset();
 };
 
